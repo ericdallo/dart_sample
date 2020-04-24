@@ -1,9 +1,20 @@
-import 'package:dart_sample/dart_sample.dart' as dart_sample;
-
 void main(List<String> arguments) {
-  final calculation = dart_sample.calculate();
 
-  final word = 'Hello world: $calculation';
+  final a = AClass(
+    bclass: BClass(),
+  );
 
-  print(word);
+  print(a);
+}
+
+class AClass {
+  AClass({this.some, this.other, this.bclass});
+
+  final String some;
+  final int other;
+  final BClass bclass;
+}
+
+class BClass {
+ 
 }
