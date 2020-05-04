@@ -1,20 +1,5 @@
 void main(List<String> arguments) {
+  final b = DateTime.may;
 
-  final a = AClass(
-    bclass: BClass(),
-  );
-
-  print(a);
-}
-
-class AClass {
-  AClass({this.some, this.other, this.bclass});
-
-  final String some;
-  final int other;
-  final BClass bclass;
-}
-
-class BClass {
- 
+  print(a.some);
 }
