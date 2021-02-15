@@ -1,5 +1,13 @@
-void main(List<String> arguments) {
-  final b = DateTime.may;
+import 'dart:convert';
+import 'dart:io';
 
-  print(a.some);
+// void main() {}
+
+Future<void> main(List<String> args) async {
+  var file = File(args[0]);
+  var lines = utf8.decoder.bind(file.openRead()).transform(LineSplitter());
+
+  await for (var line in lines) {
+    if (!line.startsWith('#')) print(line);
+  }
 }
